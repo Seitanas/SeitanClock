@@ -47,6 +47,7 @@ To get latest firmware:
 - 1pc 2.54 mm pitch MOLEX 1x4 connector.
 - 1pc 2.54 mm 1x4 female header.
 - 1pc 6x6mm Square tactile switch.
+- 1pc USB-C [breakout board](https://www.adafruit.com/product/4396).
 
 Electrical wiring diagram and PCB layout is done with CadSoft Eagle. You can find them in `eagle` folder.
 Each display segment contains 3xWS2812B LEDs. Dots contain 1 WS2812B LED. Assemble segments in order as displayed in `img/segment_order.jpg` file.
