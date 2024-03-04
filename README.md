@@ -2,6 +2,8 @@
 # SeitanClock
 NTP clock based on ESP 12F (ESP8266)
 
+![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/cyan.jpg)
+
 ## Features
 - 7 segment RGB display.
 - Clock synchronization via NTP over Wi-Fi.
