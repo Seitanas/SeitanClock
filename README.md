@@ -59,3 +59,6 @@ To get latest firmware:
 
 Electrical wiring diagram and PCB layout is done with CadSoft Eagle. You can find them in `eagle` folder.
 Each display segment contains 3xWS2812B LEDs. Dots contain 1 WS2812B LED. Assemble segments in order as displayed in `img/segment_order.jpg` file.
+3D models can be found in `stl` folder. And also on:
+[Printables](https://www.printables.com/model/792393-seitanclock-rgb-ntp-clock)
+[Thingiverse](https://www.thingiverse.com/thing:6516316)
