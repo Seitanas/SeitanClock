@@ -6,7 +6,7 @@ NTP clock based on ESP 12F (ESP8266)
 ![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/violet.jpg)
 ![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/pink.jpg)
 ![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/board.jpg)
-![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/board2.jpg)
+![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/board_2.jpg)
 ![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/inside.jpg)
 ![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/filter.jpg)
 
