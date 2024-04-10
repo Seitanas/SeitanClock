@@ -16,6 +16,7 @@ struct configStructure {
   int light_sensor_value = 700;
   int tz = 0;
   bool daylight_saving = false;
+  int current_daylight_setting = 0;
 };
 
 void readConfig(configStructure *cfg);
