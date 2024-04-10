@@ -20,7 +20,7 @@ void updateNTPTime(configStructure *cfg) {
   WiFiUDP ntpUDP;
   NTPClient timeClient(ntpUDP, cfg->ntp_server.c_str());
   timeClient.begin();
-  timeClient.setTimeOffset(cfg->tz * 3600);
+  timeClient.setTimeOffset((cfg->tz * 3600) + (cfg->current_daylight_setting * 3600));
   timeClient.update();
   rtc.adjust(timeClient.getEpochTime());
 }
@@ -63,12 +63,16 @@ int daylightSaving(configStructure *cfg, rtcData *tm) {
 }
 
 void getTime(configStructure *cfg, rtcData *tm) {
+  if (cfg->current_daylight_setting != daylightSaving(cfg, tm)){
+    cfg->current_daylight_setting = daylightSaving(cfg, tm);
+    updateNTPTime(cfg);
+  } 
   DateTime now = rtc.now();
   tm->year = now.year();
   tm->month = now.month();
   tm->dow = now.dayOfTheWeek();
   tm->day = now.day();
-  tm->hour = now.hour() + daylightSaving(cfg, tm);
+  tm->hour = now.hour();
   tm->minute = now.minute();
   tm->second = now.second();
   tm->temperature = rtc.getTemperature();
