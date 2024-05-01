@@ -7,8 +7,6 @@
 
 RTC_DS3231 rtc;
 
-char t[32];
-
 void clockInit() {
   Wire.begin(5, 4);
   rtc.begin();

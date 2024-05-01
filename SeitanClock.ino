@@ -18,8 +18,8 @@
 void setup() {
   pinMode(SETUP_PIN, INPUT); 
   Serial.begin(115200);
-  displayInit();
   clockInit();
+  displayInit();
 }
 
 void loop() {
@@ -66,7 +66,7 @@ void loop() {
           break;
         default:
           displayTime(&cfg, &tm, dot_state);
-      } 
+      }
       if (light_avg_count == 10){
         light_avg_count = 0;
         if (light_avg > cfg.light_sensor_value){
