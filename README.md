@@ -11,7 +11,7 @@ NTP clock based on ESP 12F (ESP8266)
 ![SeitanClock](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/filter.jpg)
 
 ## Features
-- 7 segment RGB display.
+- 7 segment RGB display. Also suports stock i2c LED displays with HT16K33 driver.
 - Clock synchronization via NTP over Wi-Fi.
 - Updates display intensity (and color) according to day and nigh time.
 - Displays date and temperature.

@@ -90,10 +90,10 @@ void handleSave(configStructure *cfg) {
     cfg->color_night = sanitizeColor(server.arg("color_night"));
   }
   if (isNumeric(server.arg("brightness_day"))) {
-    cfg->brightness_day = sanitizeInt(server.arg("brightness_day").toInt(), 1, 1024);
+    cfg->brightness_day = sanitizeInt(server.arg("brightness_day").toInt(), 0, 1024);
   }
   if (isNumeric(server.arg("brightness_night"))) {
-    cfg->brightness_night = sanitizeInt(server.arg("brightness_night").toInt(), 1, 1024);
+    cfg->brightness_night = sanitizeInt(server.arg("brightness_night").toInt(), 0, 1024);
   }
   if (isNumeric(server.arg("light_sensor_value"))) {
     cfg->light_sensor_value = sanitizeInt(server.arg("light_sensor_value").toInt(), 1, 1024);
