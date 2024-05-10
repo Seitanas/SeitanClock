@@ -19,8 +19,13 @@ void updateNTPTime(configStructure *cfg) {
   NTPClient timeClient(ntpUDP, cfg->ntp_server.c_str());
   timeClient.begin();
   timeClient.setTimeOffset((cfg->tz * 3600) + (cfg->current_daylight_setting * 3600));
-  timeClient.update();
-  rtc.adjust(timeClient.getEpochTime());
+  // run NTP query multiple times if there is NTP failure. Update RTC only if NTP query is successfull.
+  for (int i = 0; i < 3; i++) {
+    if (timeClient.update()) {
+      rtc.adjust(timeClient.getEpochTime());
+      break;
+    }
+  }
 }
 
 int daylightSaving(configStructure *cfg, rtcData *tm) {
@@ -64,7 +69,7 @@ void getTime(configStructure *cfg, rtcData *tm) {
   if (cfg->current_daylight_setting != daylightSaving(cfg, tm)){
     cfg->current_daylight_setting = daylightSaving(cfg, tm);
     updateNTPTime(cfg);
-  } 
+  }
   DateTime now = rtc.now();
   tm->year = now.year();
   tm->month = now.month();
