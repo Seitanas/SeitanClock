@@ -5,7 +5,7 @@ be aware of +- posioningm (it may differ from RTC module).
 */
 
 
-#include "1config.h"
+#include "config.h"
 #include "clock.h"
 #include <HT16K33.h>
 
@@ -40,7 +40,7 @@ void displayYear(configStructure *cfg, rtcData *tm) {
 }
 
 void displayMonthDay(configStructure *cfg, rtcData *tm) {
-  seg.displayTime(tm->month, tm->day, 0);
+  seg.displayDate(tm->month, tm->day);
 }
 
 void displayFlashMode(configStructure *cfg) {
