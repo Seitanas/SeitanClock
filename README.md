@@ -23,8 +23,8 @@ Clock enters setup mode at first boot (when no Wi-Fi configuration is present ye
 To enter setup mode manually, power-cycle clock while pressing the button down.
 Display will show `StP` message.
 In setup mode clock acts as Wi-Fi hot-spot. There will be new Wi-Fi network `SeitanClock-setup` available. Connect to it with default password `seitanclock`. Point your browser to `http://seitanclock-setup.local`. 
-<u>Note</u>, that Android phones seems to lack MDNS support, so in case you are using Android phone, point your browser to IP instead: `http://192.168.4.1`.
-Use setup portal to configure your clock. Reboot after.
+<u>Note</u>, that Android phones seems to lack MDNS support, so in case you are using Android phone, point your browser to IP instead: `http://192.168.4.1`. Default username for portal is `admin`, password `admin`.
+Use setup portal to configure your clock. Save and reboot after.
 
 ![Setup portal](https://raw.githubusercontent.com/Seitanas/SeitanClock/master/img/setup_portal.jpg)
 
